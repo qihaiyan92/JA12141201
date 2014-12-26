@@ -1,0 +1,88 @@
+package ipc;
+/*
+ * 多线程：线程任务系统的
+ * 线程任务不相同的多线程：
+ * 
+ * 1、怎么去获得共享数据？-------一参构造器
+ * 2、怎么保证input、output线程同步？
+ * 3、产量 ==销量？
+ * */
+
+class Resource{
+	int id;
+	String name;
+	
+}
+
+//产线
+class Input implements Runnable{
+	Resource r;
+	//构造器：对成员变量 r进行初始化
+	public Input(Resource r) {
+		super();
+		this.r = r;
+	}
+	int key = 0;
+	@Override
+	public void run() {				
+		while (true) {
+			synchronized (r) {	
+				switch (key++%3) {
+				case 0:
+					r.id = 6666;
+					r.name = "iphone6"; 
+					break;
+				case 1:
+					r.id = 7777;
+					r.name = "iphone7"; 
+					break;
+				case 2:
+					r.id = 8888;
+					r.name = "iphone8"; 
+					break;
+
+				default:
+					break;
+				}		
+			}		
+		}
+	}
+}
+
+//销售
+class Output implements Runnable{
+	Resource r;
+	//构造器：对成员变量 r进行初始化
+	public Output(Resource r) {
+		super();
+		this.r = r;
+	}
+	@Override
+	public void run() {
+		while (true) {
+			synchronized (r) {
+				System.out.println("卖：name:"+r.name +"\t id:"+r.id);
+			}		
+		}
+	}	
+}
+public class Test {
+	public static void main(String[] args) {
+		//1、创建共享资源
+		Resource r = new Resource();
+		
+		//2、创建线程任务：run
+		Input input = new Input(r);
+		Output output = new Output(r);
+		
+		//3、创建线程对象：
+		Thread th_in = new Thread(input);
+		Thread th_out = new Thread(output);
+		
+		//4、开启
+		th_in.start();
+		th_out.start();
+
+	}
+
+}

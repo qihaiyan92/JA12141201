@@ -1,0 +1,11 @@
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.jdt.ui.presentation
+ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.jdt.ui.PropertiesFileEditor.textfont
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.PropertiesFileEditor.textfont=1|Consolas|14.25|0|WINDOWS|1|-19|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.jdt.ui.editors.textfont=1|Consolas|14.25|0|WINDOWS|1|-19|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.jdt.ui.javadocfont=1|Consolas|14.25|0|WINDOWS|1|-19|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.jface.bannerfont=1|Segoe UI|10.5|1|WINDOWS|1|-14|0|0|0|700|0|0|0|0|3|2|1|34|Segoe UI;
+org.eclipse.jface.dialogfont=1|\u5FAE\u8F6F\u96C5\u9ED1|10.5|0|WINDOWS|1|-14|0|0|0|400|0|0|0|-122|3|2|1|34|\u5FAE\u8F6F\u96C5\u9ED1;
+org.eclipse.jface.headerfont=1|Segoe UI|10.5|1|WINDOWS|1|-14|0|0|0|700|0|0|0|0|3|2|1|34|Segoe UI;
+org.eclipse.jface.textfont=1|Consolas|14.25|0|WINDOWS|1|-19|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.ui.workbench.texteditor.blockSelectionModeFont=1|Courier New|10.5|0|WINDOWS|1|-14|0|0|0|400|0|0|0|0|3|2|1|49|Courier New;

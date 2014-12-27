@@ -1,8 +1,5 @@
 package ipc3;
 
-import ipc3.Input;
-import ipc3.Output;
-import ipc3.Resource;
 /*
  * 多线程：线程任务系统的
  * 线程任务不相同的多线程：
@@ -37,7 +34,7 @@ class Resource{
 		//生产
 		this.id = id;
 		this.name = name;
-		System.out.println();
+		System.out.println("生产了一部：" + this.name);
 		//通知销售
 		this.flag = true;
 		this.notify();
@@ -89,11 +86,7 @@ class Input implements Runnable{
 					break;
 				default:
 					break;
-				}	
-				
-				//3、有产品，通知销售
-				r.flag = true;
-				r.notify();			
+				}			
 		}
 	}
 }
@@ -114,6 +107,7 @@ class Output implements Runnable{
 	public void run() {		
 		while (true) {
 		r.sales();
+		}
 	}	
 }
 public class Test {
